@@ -1,34 +1,8 @@
 <!doctype html>
-<html lang="zh-Hans">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#171321">
-<title>祁煜塔罗聊天 · 雾雾的夜间来信</title>
-<link rel="stylesheet" href="style.css">
-<script src="app.js" defer></script>
-</head>
-<body>
-<div class="app">
-<header class="header"><div class="wordmark">✦ <span>夜 潮</span></div><span class="prototype">本地体验版</span></header>
-<main>
-<div class="intro"><p class="eyebrow">A LITTLE MAGIC, JUST FOR YOU</p><h1>祁煜塔罗聊天<span>让心事，落在今晚的牌里。</span></h1></div>
-<section class="deck-panel" aria-labelledby="deck-title">
-<div class="section-heading"><div><p class="eyebrow">TONIGHT’S CONSTELLATION</p><h2 id="deck-title">本轮固定牌组</h2></div><button id="redraw" class="quiet-button">↻ 重新抽牌</button></div>
-<div id="cards" class="cards"></div>
-<p class="deck-note"><span class="small-star">✧</span> 三张牌，一段夜色。重新解读会保留这组牌。</p>
-</section>
-<section class="chat-panel" aria-labelledby="chat-title">
-<div class="chat-heading"><div class="avatar" aria-hidden="true">祁</div><div><h2 id="chat-title">祁煜<span class="online-dot"></span></h2><p>潮声很轻，我在听。</p></div><span class="chat-label">与你的私语</span></div>
-<p class="simulation">本地模拟对话 · 未连接 AI 服务</p>
-<div id="messages" class="messages" role="log" aria-label="聊天记录" aria-live="polite" aria-relevant="additions text"></div>
-</section>
-</main>
-<footer class="composer-wrap">
-<form id="chat-form" class="composer">
-<label for="message" class="sr-only">雾雾的消息</label><textarea id="message" placeholder="雾雾，今晚想问些什么？" rows="2" maxlength="1000"></textarea>
-<div class="composer-bottom"><div class="tools"><button type="button" id="image-tool" aria-label="图片入口">▧</button><button type="button" id="link-tool" aria-label="链接入口">↗</button><button type="button" id="emoji-tool" aria-label="表情入口" aria-expanded="false">☺</button></div><span class="composer-hint">把心事留在这里</span><button id="send" type="submit" class="send-button" aria-label="发送消息" disabled>↑</button></div>
-<div id="emoji-picker" class="emoji-picker" hidden aria-label="选择表情"><button type="button">🌙</button><button type="button">💜</button><button type="button">🐟</button><button type="button">✨</button><button type="button">🫧</button></div>
-</form><p class="footer-note">牌面是一种想象与陪伴，让决定仍属于你。</p>
-</footer>
-</div>
-<div id="toast" class="toast" role="status" hidden></div>
-</body></html>
+<html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#15121d"><title>祁煜 · 私人聊天</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body><div class="app">
+<header class="header"><div class="avatar">祁</div><div><h1>祁煜 <span class="dot"></span></h1><p>我在，慢慢说。</p></div><span class="local-label">本地模拟</span></header>
+<section class="deck-panel" aria-label="本轮牌组"><div class="deck-row"><button id="deck-toggle" aria-expanded="false" aria-controls="deck-details"><span class="deck-title">本轮牌组</span><span id="cards" class="cards"></span><span id="chevron">⌄</span></button><button id="redraw">↻ <span>重新抽牌</span></button></div><div id="deck-details" hidden><div id="detail-cards"></div><p>牌组仅用于对话内部参考。重新解读保留原回复的牌组。</p></div></section>
+<main id="conversation" aria-label="与祁煜的对话"><p class="date-label">今晚 · 只属于我们的对话</p><div id="messages" role="log" aria-live="polite" aria-relevant="additions text"></div></main>
+<footer class="composer-wrap"><form id="chat-form"><div class="input-row"><label for="message" class="sr-only">发送给祁煜</label><textarea id="message" rows="1" maxlength="1000" placeholder="给祁煜发消息…"></textarea><button id="send" type="submit" aria-label="发送消息" disabled>↑</button></div><div class="tool-row"><div class="tools"><button type="button" id="image-tool" aria-label="图片入口">▧</button><button type="button" id="link-tool" aria-label="链接入口">↗</button><button type="button" id="emoji-tool" aria-label="表情入口" aria-expanded="false">☺</button></div><span>雾雾，想说什么都可以。</span></div><div id="emoji-picker" hidden aria-label="选择表情"><button type="button">🌙</button><button type="button">💜</button><button type="button">🐟</button><button type="button">✨</button><button type="button">🫧</button></div></form></footer>
+</div><div id="toast" role="status" hidden></div></body></html>
