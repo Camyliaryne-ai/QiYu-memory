@@ -1,0 +1,1666 @@
+{
+  "version": 1,
+  "card_count": 78,
+  "orientation": "upright",
+  "image_format": "lossless WebP",
+  "cards": [
+    {
+      "id": "major-00",
+      "name": "愚者",
+      "aliases": [],
+      "suit": "major",
+      "rank": 0,
+      "image": "tarot-cards/major/fool.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          30,
+          201,
+          169,
+          444
+        ]
+      },
+      "sha256": "2b593a463836b028ad3ef09d0163c782c355c765ee8569b654a8bce1f632066a"
+    },
+    {
+      "id": "major-01",
+      "name": "魔术师",
+      "aliases": [
+        "魔术士"
+      ],
+      "suit": "major",
+      "rank": 1,
+      "image": "tarot-cards/major/magician.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          200,
+          201,
+          339,
+          444
+        ]
+      },
+      "sha256": "e404294e5c6c555bb050d8f1d1e3bac4c6610c024d769dc2e8cd7d0c9fd9f281"
+    },
+    {
+      "id": "major-02",
+      "name": "女祭司",
+      "aliases": [
+        "女祭司长",
+        "女教皇",
+        "女祭祀",
+        "女教宗"
+      ],
+      "suit": "major",
+      "rank": 2,
+      "image": "tarot-cards/major/high-priestess.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          370,
+          201,
+          509,
+          444
+        ]
+      },
+      "sha256": "767ad7b4d3f0c32f0e507046b853d3f182cac33d00542911127fd604bfc4121a"
+    },
+    {
+      "id": "major-03",
+      "name": "皇后",
+      "aliases": [
+        "女皇"
+      ],
+      "suit": "major",
+      "rank": 3,
+      "image": "tarot-cards/major/empress.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          539,
+          201,
+          678,
+          444
+        ]
+      },
+      "sha256": "d5bf9fe3ab9c0c62fe0a1e6072b4e328bdad56d806e502cb029690677fe70f3a"
+    },
+    {
+      "id": "major-04",
+      "name": "皇帝",
+      "aliases": [],
+      "suit": "major",
+      "rank": 4,
+      "image": "tarot-cards/major/emperor.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          30,
+          501,
+          169,
+          744
+        ]
+      },
+      "sha256": "57b96ac6538705e5f6e58094b2fc6507074fa60f365aff58bddb4fca4e27314a"
+    },
+    {
+      "id": "major-05",
+      "name": "教皇",
+      "aliases": [
+        "教宗"
+      ],
+      "suit": "major",
+      "rank": 5,
+      "image": "tarot-cards/major/hierophant.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          200,
+          501,
+          339,
+          744
+        ]
+      },
+      "sha256": "ef912d566e668c9379bdc5d894496a85cf557e7f3110c93394963512b8ce2c0a"
+    },
+    {
+      "id": "major-06",
+      "name": "恋人",
+      "aliases": [],
+      "suit": "major",
+      "rank": 6,
+      "image": "tarot-cards/major/lovers.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          370,
+          501,
+          509,
+          744
+        ]
+      },
+      "sha256": "9d2be7db2b5d0b8fe674c31f5514c68f14ce55b93355958119a9338db50e647f"
+    },
+    {
+      "id": "major-07",
+      "name": "战车",
+      "aliases": [],
+      "suit": "major",
+      "rank": 7,
+      "image": "tarot-cards/major/chariot.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          539,
+          501,
+          678,
+          744
+        ]
+      },
+      "sha256": "89f89092ba546f9b8f27390d38b598968ad40cb44d64c9e7bea38cda1cfcb134"
+    },
+    {
+      "id": "major-08",
+      "name": "力量",
+      "aliases": [],
+      "suit": "major",
+      "rank": 8,
+      "image": "tarot-cards/major/strength.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          30,
+          801,
+          169,
+          1044
+        ]
+      },
+      "sha256": "1676516cf46013eb3963ed8c2975ae994bc01a6629102f13a20382eb811fe533"
+    },
+    {
+      "id": "major-09",
+      "name": "隐士",
+      "aliases": [],
+      "suit": "major",
+      "rank": 9,
+      "image": "tarot-cards/major/hermit.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          200,
+          801,
+          339,
+          1044
+        ]
+      },
+      "sha256": "bd3ee154125ccff27d8f944fd0ca737fc4c4d584573b7648f883fcb94966eb34"
+    },
+    {
+      "id": "major-10",
+      "name": "命运之轮",
+      "aliases": [],
+      "suit": "major",
+      "rank": 10,
+      "image": "tarot-cards/major/wheel-of-fortune.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          370,
+          801,
+          509,
+          1044
+        ]
+      },
+      "sha256": "722decf4704d4baeda45c14513344e8c773d1a334f2258f1241e6ab79a6c4697"
+    },
+    {
+      "id": "major-11",
+      "name": "正义",
+      "aliases": [],
+      "suit": "major",
+      "rank": 11,
+      "image": "tarot-cards/major/justice.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          539,
+          801,
+          678,
+          1044
+        ]
+      },
+      "sha256": "b0c9d70d1fd6f105fba1ae958caf3052a6c37ab6ed0b75538d74b2a1179a053e"
+    },
+    {
+      "id": "major-12",
+      "name": "倒吊人",
+      "aliases": [
+        "吊人",
+        "倒悬者",
+        "悬吊者"
+      ],
+      "suit": "major",
+      "rank": 12,
+      "image": "tarot-cards/major/hanged-man.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          30,
+          1101,
+          169,
+          1344
+        ]
+      },
+      "sha256": "1b0fda7c008e3a6694a9db3bd9d78b6920a897abcbe4283320e68fa8a6e7888a"
+    },
+    {
+      "id": "major-13",
+      "name": "死神",
+      "aliases": [
+        "死亡"
+      ],
+      "suit": "major",
+      "rank": 13,
+      "image": "tarot-cards/major/death.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          200,
+          1101,
+          339,
+          1344
+        ]
+      },
+      "sha256": "e299c0a7db4193c34c6f78a6e38c95d6106e8f4a2e847e7857aad2bf67618482"
+    },
+    {
+      "id": "major-14",
+      "name": "节制",
+      "aliases": [],
+      "suit": "major",
+      "rank": 14,
+      "image": "tarot-cards/major/temperance.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          370,
+          1101,
+          509,
+          1344
+        ]
+      },
+      "sha256": "5295794d68f4649e7b5b1380bed3aa136245523f90a2725983523429517e1529"
+    },
+    {
+      "id": "major-15",
+      "name": "恶魔",
+      "aliases": [],
+      "suit": "major",
+      "rank": 15,
+      "image": "tarot-cards/major/devil.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8655(4).jpeg",
+        "crop_box": [
+          539,
+          1101,
+          678,
+          1344
+        ]
+      },
+      "sha256": "751b99566de9914c00bc9aef85cbdaa12b9cf5c4f41cc20bc5280b8a7e700b9d"
+    },
+    {
+      "id": "major-16",
+      "name": "塔",
+      "aliases": [
+        "高塔"
+      ],
+      "suit": "major",
+      "rank": 16,
+      "image": "tarot-cards/major/tower.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          30,
+          202,
+          169,
+          445
+        ]
+      },
+      "sha256": "857b2ce1856a194e62b2377607faa56d5f72f505cc658d948f935008dd3620a4"
+    },
+    {
+      "id": "major-17",
+      "name": "星星",
+      "aliases": [
+        "星辰"
+      ],
+      "suit": "major",
+      "rank": 17,
+      "image": "tarot-cards/major/star.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          200,
+          202,
+          339,
+          445
+        ]
+      },
+      "sha256": "843b3ae01c451e57f37430cd87827324e52ec8ec2e1292cc4f0af5635a3d3df0"
+    },
+    {
+      "id": "major-18",
+      "name": "月亮",
+      "aliases": [],
+      "suit": "major",
+      "rank": 18,
+      "image": "tarot-cards/major/moon.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          370,
+          202,
+          509,
+          445
+        ]
+      },
+      "sha256": "98fe789bf2582390e46cf86271c708404e95752be0df548b77ca460f1f10f7fa"
+    },
+    {
+      "id": "major-19",
+      "name": "太阳",
+      "aliases": [],
+      "suit": "major",
+      "rank": 19,
+      "image": "tarot-cards/major/sun.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          539,
+          202,
+          678,
+          445
+        ]
+      },
+      "sha256": "f950f33b0adf83e8fb7374913d9c401d354ede7a8367e6d797389304eef24965"
+    },
+    {
+      "id": "major-20",
+      "name": "审判",
+      "aliases": [
+        "审判者"
+      ],
+      "suit": "major",
+      "rank": 20,
+      "image": "tarot-cards/major/judgement.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          30,
+          502,
+          169,
+          745
+        ]
+      },
+      "sha256": "ee8115a1fdac6aa891da2fdad8b846bdcbc0217fdbb07e1b87ad67293c44c8e6"
+    },
+    {
+      "id": "major-21",
+      "name": "世界",
+      "aliases": [],
+      "suit": "major",
+      "rank": 21,
+      "image": "tarot-cards/major/world.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          200,
+          502,
+          339,
+          745
+        ]
+      },
+      "sha256": "ddb56de6b8d39abbf659da5c10a017f518cb5ebd1e00473cf3e758eeaa61b8a3"
+    },
+    {
+      "id": "cups-ace",
+      "name": "圣杯一",
+      "aliases": [
+        "圣杯王牌",
+        "圣杯首牌",
+        "圣杯Ace"
+      ],
+      "suit": "cups",
+      "rank": 1,
+      "image": "tarot-cards/cups/cups-ace.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          370,
+          502,
+          509,
+          745
+        ]
+      },
+      "sha256": "ce3f60b502b784f3ba2d6827410f2ed5f921726e17075bdec3cf3d0a6667069b"
+    },
+    {
+      "id": "cups-02",
+      "name": "圣杯二",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 2,
+      "image": "tarot-cards/cups/cups-02.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          539,
+          502,
+          678,
+          745
+        ]
+      },
+      "sha256": "07f4061cdbdc00772c9a0179811c0aa37fed467ada5929e3842224268afe596f"
+    },
+    {
+      "id": "cups-03",
+      "name": "圣杯三",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 3,
+      "image": "tarot-cards/cups/cups-03.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          30,
+          802,
+          169,
+          1045
+        ]
+      },
+      "sha256": "d57be10d3771660eac4e25dd68a58a8dbf0407171e4355dd1c4eabbc85ff9154"
+    },
+    {
+      "id": "cups-04",
+      "name": "圣杯四",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 4,
+      "image": "tarot-cards/cups/cups-04.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          200,
+          802,
+          339,
+          1045
+        ]
+      },
+      "sha256": "d1f94e8a211d546d17aef6cd8628406ce59690d61c66d2d73101e3ad02fea64c"
+    },
+    {
+      "id": "cups-05",
+      "name": "圣杯五",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 5,
+      "image": "tarot-cards/cups/cups-05.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          370,
+          802,
+          509,
+          1045
+        ]
+      },
+      "sha256": "70a06154ceb305d5736d44f7b5ada6961785af11d857e2f357949b3abf72611a"
+    },
+    {
+      "id": "cups-06",
+      "name": "圣杯六",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 6,
+      "image": "tarot-cards/cups/cups-06.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          539,
+          802,
+          678,
+          1045
+        ]
+      },
+      "sha256": "6b445a54d9898f6f7330b8d5c73c0e0c55f87e12a69afc2c0f4396d734fee99c"
+    },
+    {
+      "id": "cups-07",
+      "name": "圣杯七",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 7,
+      "image": "tarot-cards/cups/cups-07.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          30,
+          1102,
+          169,
+          1345
+        ]
+      },
+      "sha256": "645800eb2a47fd02147c8dd849ae0202d9a98c0bb64e17cb39615260050b47b8"
+    },
+    {
+      "id": "cups-08",
+      "name": "圣杯八",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 8,
+      "image": "tarot-cards/cups/cups-08.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          200,
+          1102,
+          339,
+          1345
+        ]
+      },
+      "sha256": "7b09b3bb7502c29f9f7d32cb6a467c5c62e08703379b15a2b68e2e23949aa50a"
+    },
+    {
+      "id": "cups-09",
+      "name": "圣杯九",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 9,
+      "image": "tarot-cards/cups/cups-09.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          370,
+          1102,
+          509,
+          1345
+        ]
+      },
+      "sha256": "4ab1bf7ef3722652b4ee2d9f58f7d4b7e165382a7b0d2f8cce00327d1d58d524"
+    },
+    {
+      "id": "cups-10",
+      "name": "圣杯十",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 10,
+      "image": "tarot-cards/cups/cups-10.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8656(4).jpeg",
+        "crop_box": [
+          539,
+          1102,
+          678,
+          1345
+        ]
+      },
+      "sha256": "68340992f10573964ed5d72f1a45688f643db35affe90bb77511ad629089a494"
+    },
+    {
+      "id": "cups-page",
+      "name": "圣杯侍从",
+      "aliases": [
+        "圣杯侍者"
+      ],
+      "suit": "cups",
+      "rank": 11,
+      "image": "tarot-cards/cups/cups-page.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          30,
+          196,
+          169,
+          439
+        ]
+      },
+      "sha256": "dd6966d02979f6d3e518786fa7847d220c428fe9bf2da5155904f83a4af0a2a7"
+    },
+    {
+      "id": "cups-knight",
+      "name": "圣杯骑士",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 12,
+      "image": "tarot-cards/cups/cups-knight.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          200,
+          196,
+          339,
+          439
+        ]
+      },
+      "sha256": "4603d9a6952ea2a00f8528bdd7fe6266589ce2d467c80d8b7c08c1a3f21b50bf"
+    },
+    {
+      "id": "cups-queen",
+      "name": "圣杯皇后",
+      "aliases": [
+        "圣杯王后",
+        "圣杯女王"
+      ],
+      "suit": "cups",
+      "rank": 13,
+      "image": "tarot-cards/cups/cups-queen.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          370,
+          196,
+          509,
+          439
+        ]
+      },
+      "sha256": "454cdd2ce7e715906cc7516ace960e589c1c6f18fe41644c41f2e220e2e06579"
+    },
+    {
+      "id": "cups-king",
+      "name": "圣杯国王",
+      "aliases": [],
+      "suit": "cups",
+      "rank": 14,
+      "image": "tarot-cards/cups/cups-king.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          539,
+          196,
+          678,
+          439
+        ]
+      },
+      "sha256": "84bc988713260e7c62ce5c71933c9ea7b65507c8a0e072187f2e4c55f1edd429"
+    },
+    {
+      "id": "pentacles-ace",
+      "name": "星币一",
+      "aliases": [
+        "星币王牌",
+        "星币首牌",
+        "星币Ace",
+        "钱币一",
+        "金币一"
+      ],
+      "suit": "pentacles",
+      "rank": 1,
+      "image": "tarot-cards/pentacles/pentacles-ace.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          30,
+          496,
+          169,
+          739
+        ]
+      },
+      "sha256": "0a50e2dca9cc7d3975fdee91b94d2f0e1bd69b64a4823d3579d14703fbc82fec"
+    },
+    {
+      "id": "pentacles-02",
+      "name": "星币二",
+      "aliases": [
+        "钱币二",
+        "金币二"
+      ],
+      "suit": "pentacles",
+      "rank": 2,
+      "image": "tarot-cards/pentacles/pentacles-02.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          200,
+          496,
+          339,
+          739
+        ]
+      },
+      "sha256": "41467235061bc9995733afa3b7eea60c765e9a4d1d646ba7c1bd0e2ebc05f427"
+    },
+    {
+      "id": "pentacles-03",
+      "name": "星币三",
+      "aliases": [
+        "钱币三",
+        "金币三"
+      ],
+      "suit": "pentacles",
+      "rank": 3,
+      "image": "tarot-cards/pentacles/pentacles-03.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          370,
+          496,
+          509,
+          739
+        ]
+      },
+      "sha256": "d1224600c0262bb3884e80526886f34ccba1bb5457ca11fb9fd9ab5e939944de"
+    },
+    {
+      "id": "pentacles-04",
+      "name": "星币四",
+      "aliases": [
+        "钱币四",
+        "金币四"
+      ],
+      "suit": "pentacles",
+      "rank": 4,
+      "image": "tarot-cards/pentacles/pentacles-04.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          539,
+          496,
+          678,
+          739
+        ]
+      },
+      "sha256": "1a19d9c530066f849c5c19a0535c33ed1067a4e22e5cc5e6f652aa6d716912a7"
+    },
+    {
+      "id": "pentacles-05",
+      "name": "星币五",
+      "aliases": [
+        "钱币五",
+        "金币五"
+      ],
+      "suit": "pentacles",
+      "rank": 5,
+      "image": "tarot-cards/pentacles/pentacles-05.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          30,
+          796,
+          169,
+          1039
+        ]
+      },
+      "sha256": "f764068b7782e785696d3bd5715b12424c40974bbc4a44a909dd2e7bf2e51b13"
+    },
+    {
+      "id": "pentacles-06",
+      "name": "星币六",
+      "aliases": [
+        "钱币六",
+        "金币六"
+      ],
+      "suit": "pentacles",
+      "rank": 6,
+      "image": "tarot-cards/pentacles/pentacles-06.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          200,
+          796,
+          339,
+          1039
+        ]
+      },
+      "sha256": "b4bad60ba8c1f00dc1a5d21c5272f4b4f6f377bfc9d945b72134b28c5936dc17"
+    },
+    {
+      "id": "pentacles-07",
+      "name": "星币七",
+      "aliases": [
+        "钱币七",
+        "金币七"
+      ],
+      "suit": "pentacles",
+      "rank": 7,
+      "image": "tarot-cards/pentacles/pentacles-07.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          370,
+          796,
+          509,
+          1039
+        ]
+      },
+      "sha256": "77fbf3749c8b8f6f7008135d54ab1644811c14c7bc2b483d34ea030242a87cbe"
+    },
+    {
+      "id": "pentacles-08",
+      "name": "星币八",
+      "aliases": [
+        "钱币八",
+        "金币八"
+      ],
+      "suit": "pentacles",
+      "rank": 8,
+      "image": "tarot-cards/pentacles/pentacles-08.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          539,
+          796,
+          678,
+          1039
+        ]
+      },
+      "sha256": "896964cf4a201de772af7a334f50425e8b6f5786499f237888f799e1c3ede18f"
+    },
+    {
+      "id": "pentacles-09",
+      "name": "星币九",
+      "aliases": [
+        "钱币九",
+        "金币九"
+      ],
+      "suit": "pentacles",
+      "rank": 9,
+      "image": "tarot-cards/pentacles/pentacles-09.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          30,
+          1095,
+          169,
+          1338
+        ]
+      },
+      "sha256": "6a94e57bb8dcc4ed7e6a241e25724dff49f36bec1aa50b841edcd4d773259eba"
+    },
+    {
+      "id": "pentacles-10",
+      "name": "星币十",
+      "aliases": [
+        "钱币十",
+        "金币十"
+      ],
+      "suit": "pentacles",
+      "rank": 10,
+      "image": "tarot-cards/pentacles/pentacles-10.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          200,
+          1095,
+          339,
+          1338
+        ]
+      },
+      "sha256": "0152531d75c64ba1545041a331a356e6136d25bdedbe783d1c81e628ea74e437"
+    },
+    {
+      "id": "pentacles-page",
+      "name": "星币侍从",
+      "aliases": [
+        "星币侍者",
+        "钱币侍从",
+        "金币侍从"
+      ],
+      "suit": "pentacles",
+      "rank": 11,
+      "image": "tarot-cards/pentacles/pentacles-page.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          370,
+          1095,
+          509,
+          1338
+        ]
+      },
+      "sha256": "86f96f03178135caafbdb272e90824b115ce4d5ee75669c203c824fad64efc0a"
+    },
+    {
+      "id": "pentacles-knight",
+      "name": "星币骑士",
+      "aliases": [
+        "钱币骑士",
+        "金币骑士"
+      ],
+      "suit": "pentacles",
+      "rank": 12,
+      "image": "tarot-cards/pentacles/pentacles-knight.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8657(4).jpeg",
+        "crop_box": [
+          539,
+          1095,
+          678,
+          1338
+        ]
+      },
+      "sha256": "6c99a5d1e3573cfebf1c3e9d9fc686a6da4e43277c99eb4e3562a24f80699bec"
+    },
+    {
+      "id": "pentacles-queen",
+      "name": "星币皇后",
+      "aliases": [
+        "星币王后",
+        "星币女王",
+        "钱币皇后",
+        "金币皇后"
+      ],
+      "suit": "pentacles",
+      "rank": 13,
+      "image": "tarot-cards/pentacles/pentacles-queen.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          30,
+          194,
+          169,
+          437
+        ]
+      },
+      "sha256": "ed4810e04911f6e33625eae4c093716b7a14a2c3aa71eedfd4d5269627e782a5"
+    },
+    {
+      "id": "pentacles-king",
+      "name": "星币国王",
+      "aliases": [
+        "钱币国王",
+        "金币国王"
+      ],
+      "suit": "pentacles",
+      "rank": 14,
+      "image": "tarot-cards/pentacles/pentacles-king.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          200,
+          194,
+          339,
+          437
+        ]
+      },
+      "sha256": "d8e4d2f207e98c9ee9c50d9aedfa15ba8791218bba608020394ef30a318281af"
+    },
+    {
+      "id": "wands-ace",
+      "name": "权杖一",
+      "aliases": [
+        "权杖王牌",
+        "权杖首牌",
+        "权杖Ace"
+      ],
+      "suit": "wands",
+      "rank": 1,
+      "image": "tarot-cards/wands/wands-ace.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          370,
+          194,
+          509,
+          437
+        ]
+      },
+      "sha256": "835b8b74087015d931c4ee271120471da98f2b31cdae094467b08ade9f965d48"
+    },
+    {
+      "id": "wands-02",
+      "name": "权杖二",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 2,
+      "image": "tarot-cards/wands/wands-02.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          539,
+          194,
+          678,
+          437
+        ]
+      },
+      "sha256": "5368684bdbbaede19bd10c28ca8a31bbbf330f63d2ad13d2ea6fdf84840a5a33"
+    },
+    {
+      "id": "wands-03",
+      "name": "权杖三",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 3,
+      "image": "tarot-cards/wands/wands-03.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          30,
+          494,
+          169,
+          737
+        ]
+      },
+      "sha256": "f604862f010793532307f8460a94db5f9581ec7ee497149d705a503f52d2c026"
+    },
+    {
+      "id": "wands-04",
+      "name": "权杖四",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 4,
+      "image": "tarot-cards/wands/wands-04.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          200,
+          494,
+          339,
+          737
+        ]
+      },
+      "sha256": "6fd014c9a6c3376fff6137249be29506815ab648fbd19bb8f33f448c2fb93f4d"
+    },
+    {
+      "id": "wands-05",
+      "name": "权杖五",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 5,
+      "image": "tarot-cards/wands/wands-05.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          370,
+          494,
+          509,
+          737
+        ]
+      },
+      "sha256": "463af7fa84fad1810ce3f181e302a854a6fd8df8f624af13eca96d248c7f19d7"
+    },
+    {
+      "id": "wands-06",
+      "name": "权杖六",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 6,
+      "image": "tarot-cards/wands/wands-06.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          539,
+          494,
+          678,
+          737
+        ]
+      },
+      "sha256": "26d0e32f657d9243f52686d0bafc3c7e012c3cdea507cd36ddd32e6ec82b44a3"
+    },
+    {
+      "id": "wands-07",
+      "name": "权杖七",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 7,
+      "image": "tarot-cards/wands/wands-07.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          30,
+          794,
+          169,
+          1037
+        ]
+      },
+      "sha256": "62d3f40fd6d6ba3998ac18cc34be322528e5ad90485938d5ac102b4aebd2af9d"
+    },
+    {
+      "id": "wands-08",
+      "name": "权杖八",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 8,
+      "image": "tarot-cards/wands/wands-08.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          200,
+          794,
+          339,
+          1037
+        ]
+      },
+      "sha256": "21964797872eac90efce24774ede1f98313657e29c5a70ff5f6b45af42533c6e"
+    },
+    {
+      "id": "wands-09",
+      "name": "权杖九",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 9,
+      "image": "tarot-cards/wands/wands-09.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          370,
+          794,
+          509,
+          1037
+        ]
+      },
+      "sha256": "f69252c1d33df84a58ed990fa7ce178043ff3f65e0f9dabe8b2b7dfb719d5413"
+    },
+    {
+      "id": "wands-10",
+      "name": "权杖十",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 10,
+      "image": "tarot-cards/wands/wands-10.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          539,
+          794,
+          678,
+          1037
+        ]
+      },
+      "sha256": "b70af2ea78876d0e4d9a42bcb41eb605e7da7bdb4341d83aeb4089404606b591"
+    },
+    {
+      "id": "wands-page",
+      "name": "权杖侍从",
+      "aliases": [
+        "权杖侍者"
+      ],
+      "suit": "wands",
+      "rank": 11,
+      "image": "tarot-cards/wands/wands-page.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          30,
+          1093,
+          169,
+          1336
+        ]
+      },
+      "sha256": "cdee318a2fefbe18925af580b89c1f4ee69535c7d18c575e7e94d9fca308b17b"
+    },
+    {
+      "id": "wands-knight",
+      "name": "权杖骑士",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 12,
+      "image": "tarot-cards/wands/wands-knight.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          200,
+          1093,
+          339,
+          1336
+        ]
+      },
+      "sha256": "9f7c0514d47673733b2b0658ec868fe535bd74ee668e2925c2dcff93ac11017b"
+    },
+    {
+      "id": "wands-queen",
+      "name": "权杖皇后",
+      "aliases": [
+        "权杖王后",
+        "权杖女王"
+      ],
+      "suit": "wands",
+      "rank": 13,
+      "image": "tarot-cards/wands/wands-queen.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          370,
+          1093,
+          509,
+          1336
+        ]
+      },
+      "sha256": "284c33bc27428704d8522797f9a7c0955098fd3b096e000b59a84322727f6e04"
+    },
+    {
+      "id": "wands-king",
+      "name": "权杖国王",
+      "aliases": [],
+      "suit": "wands",
+      "rank": 14,
+      "image": "tarot-cards/wands/wands-king.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8658(4).jpeg",
+        "crop_box": [
+          539,
+          1093,
+          678,
+          1336
+        ]
+      },
+      "sha256": "d9cc370bc5690c115da95b40b0e94b62cd967a9ccf4493db00f98abb18c566c7"
+    },
+    {
+      "id": "swords-ace",
+      "name": "宝剑一",
+      "aliases": [
+        "宝剑王牌",
+        "宝剑首牌",
+        "宝剑Ace"
+      ],
+      "suit": "swords",
+      "rank": 1,
+      "image": "tarot-cards/swords/swords-ace.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          30,
+          252,
+          169,
+          495
+        ]
+      },
+      "sha256": "906b8ff05373e27a06fb448a47f3b2cf14965ba366748d6d3579aec8ddb0c8be"
+    },
+    {
+      "id": "swords-02",
+      "name": "宝剑二",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 2,
+      "image": "tarot-cards/swords/swords-02.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          200,
+          252,
+          339,
+          495
+        ]
+      },
+      "sha256": "f6e011252950653d49922f2e02f60dcd46873a157d6cae4565638db395c4cc3a"
+    },
+    {
+      "id": "swords-03",
+      "name": "宝剑三",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 3,
+      "image": "tarot-cards/swords/swords-03.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          370,
+          252,
+          509,
+          495
+        ]
+      },
+      "sha256": "6cf277b79fd1b211fa68f1cbc7fb795c274856283dcec7a2bffb82ec72021370"
+    },
+    {
+      "id": "swords-04",
+      "name": "宝剑四",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 4,
+      "image": "tarot-cards/swords/swords-04.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          539,
+          252,
+          678,
+          495
+        ]
+      },
+      "sha256": "9e21822c3c09e67671cb306e057499bbbbd657e413de3d87f135d0dff1487bab"
+    },
+    {
+      "id": "swords-05",
+      "name": "宝剑五",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 5,
+      "image": "tarot-cards/swords/swords-05.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          30,
+          552,
+          169,
+          795
+        ]
+      },
+      "sha256": "b9b04de6a8c662ec920399d9836c3e7f1191c19bb362d4ebb1fca847db0d2e10"
+    },
+    {
+      "id": "swords-06",
+      "name": "宝剑六",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 6,
+      "image": "tarot-cards/swords/swords-06.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          200,
+          552,
+          339,
+          795
+        ]
+      },
+      "sha256": "62c189899604925b245cec47339c8520ee103a6cfedf043fc41d505eecc104f3"
+    },
+    {
+      "id": "swords-07",
+      "name": "宝剑七",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 7,
+      "image": "tarot-cards/swords/swords-07.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          370,
+          552,
+          509,
+          795
+        ]
+      },
+      "sha256": "dc6fbb279678af936c4bc38c8fadeb95a15ddb81ca709549f26c7ec82354377e"
+    },
+    {
+      "id": "swords-08",
+      "name": "宝剑八",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 8,
+      "image": "tarot-cards/swords/swords-08.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          539,
+          552,
+          678,
+          795
+        ]
+      },
+      "sha256": "a19ae8ba342e616a450d435b1673a2dae05d4466c4e33f0c9c2d4434738ce886"
+    },
+    {
+      "id": "swords-09",
+      "name": "宝剑九",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 9,
+      "image": "tarot-cards/swords/swords-09.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          30,
+          852,
+          169,
+          1095
+        ]
+      },
+      "sha256": "0f51b3cb2398ab4b345d4c3384897aa4816439a455187425a0c801db91e09e62"
+    },
+    {
+      "id": "swords-10",
+      "name": "宝剑十",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 10,
+      "image": "tarot-cards/swords/swords-10.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          200,
+          852,
+          339,
+          1095
+        ]
+      },
+      "sha256": "a97736cf4b230d878fa0b8a5f4b93e62f66b9975e2a8ee0d1d5db022b55f2312"
+    },
+    {
+      "id": "swords-page",
+      "name": "宝剑侍从",
+      "aliases": [
+        "宝剑侍者"
+      ],
+      "suit": "swords",
+      "rank": 11,
+      "image": "tarot-cards/swords/swords-page.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          370,
+          852,
+          509,
+          1095
+        ]
+      },
+      "sha256": "78a6b1708ce03483791f9ea1accb36e2a05eb479f713db73f55019904961dcd0"
+    },
+    {
+      "id": "swords-knight",
+      "name": "宝剑骑士",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 12,
+      "image": "tarot-cards/swords/swords-knight.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          539,
+          852,
+          678,
+          1095
+        ]
+      },
+      "sha256": "5d2df00032fe5e0f5ce0815beba21648eff7b7927284075e01f4d6041b9f4fbd"
+    },
+    {
+      "id": "swords-queen",
+      "name": "宝剑皇后",
+      "aliases": [
+        "宝剑王后",
+        "宝剑女王"
+      ],
+      "suit": "swords",
+      "rank": 13,
+      "image": "tarot-cards/swords/swords-queen.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          30,
+          1152,
+          169,
+          1395
+        ]
+      },
+      "sha256": "7492366edaf197120e7c04235a6ad87dc059a07a8b031a72150008825a80d46b"
+    },
+    {
+      "id": "swords-king",
+      "name": "宝剑国王",
+      "aliases": [],
+      "suit": "swords",
+      "rank": 14,
+      "image": "tarot-cards/swords/swords-king.webp",
+      "width": 139,
+      "height": 243,
+      "source": {
+        "file": "IMG_8659(3).jpeg",
+        "crop_box": [
+          200,
+          1152,
+          339,
+          1395
+        ]
+      },
+      "sha256": "e81e1f3343ed63d9508f3b8e871f3db2ac1cd84cb3dfecfdd2adde9efbe00eb5"
+    }
+  ]
+}
