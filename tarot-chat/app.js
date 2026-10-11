@@ -37,34 +37,50 @@ const flowStatus=document.querySelector('#flow-status'),shuffleStage=document.qu
 for(let i=0;i<20;i++){const back=document.createElement('span');back.className='shuffle-back';back.style.setProperty('--i',i);shuffleStage.append(back);}
 let flowState='idle';
 const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+// Presentation timing is independent of the card random engine.
+const pacing=(min,max)=>Math.round(min+Math.random()*(max-min));
+function typingDuration(reply){return Math.max(2500,Math.min(5500,2200+Array.from(reply).length*25+pacing(-400,400)));}
+function showTyping(message){
+ message.classList.add('typing');
+ const bubble=message.querySelector('.bubble');bubble.replaceChildren();bubble.setAttribute('aria-label','祁煜正在输入');
+ const dots=document.createElement('span');dots.className='typing-dots';dots.setAttribute('aria-hidden','true');
+ for(let i=0;i<3;i++){const dot=document.createElement('span');dot.textContent='•';dots.append(dot);}bubble.append(dots);
+ scrollToLatest();
+}
+function finishTyping(message,reply){message.classList.remove('typing');const bubble=message.querySelector('.bubble');bubble.removeAttribute('aria-label');bubble.textContent=reply;}
+
 function setState(state,text){flowState=state;document.querySelector('.app').dataset.state=state;flowStatus.textContent=text;flowStatus.hidden=!text;shuffleStage.hidden=state!=='shuffling';}
 async function runRound(round,isRedraw=false){
  setBusy(true);spreadMode.disabled=true;
  document.querySelector('#deck-details').hidden=true;document.querySelector('#deck-toggle').setAttribute('aria-expanded','false');
  try{
   if(!isRedraw){
-   setState('selecting_spread','正在与祁煜建立联系…');cardsEl.textContent='正在推荐牌阵…';document.querySelector('#spread-name').textContent='';
+   setState('connecting_qiyu','正在与祁煜建立联系…');cardsEl.textContent='等待建立联系…';document.querySelector('#spread-name').textContent='';
+   await wait(pacing(2000,5000));
+   setState('selecting_spread','正在推荐牌阵…');cardsEl.textContent='正在推荐牌阵…';
    const id=spreadMode.value==='auto'?await spreadSelector.classify(round.userMessage):spreadMode.value;
    round.spread=TarotData.spreads.find(s=>s.id===id);if(!round.spread)throw new Error('未找到合适牌阵');
-   await wait(450);
+   await wait(pacing(800,1400));
   }
   document.querySelector('#spread-name').textContent=round.spread.name+' · '+round.spread.count+'张';
   setState('shuffling','洗牌中…');cardsEl.textContent='洗牌中…';
-  await wait(3000+randomInt(2001));
+  await wait(pacing(3500,5000));
   // The random engine alone selects cards. Exactly one draw operation per user-requested round.
   round.cards=draw(round.spread,round.cards);currentRound=round;round.version=0;
   setState('cards_revealed','本轮牌组已锁定');renderCards();
-  await wait(650);
+  await wait(pacing(1200,2000));
   setState('interpreting','正在解读这一轮…');
   round.interpretation=interpret(round.cards,round.spread,round.userMessage);
-  await wait(600+randomInt(401));
+  await wait(pacing(1800,3000));
   round.qiyuReply=replyText(round);
-  setState('interpreting','祁煜正在输入…');
-  await wait(650+randomInt(701));
+  setState('qiyu_typing','');
+  const replyMessage=isRedraw?messages.querySelector(`[data-round-id="${round.id}"]`):appendMessage('',false,round);
+  showTyping(replyMessage);
+  await wait(typingDuration(round.qiyuReply));
+  finishTyping(replyMessage,round.qiyuReply);
   if(isRedraw){
-   messages.querySelector(`[data-round-id="${round.id}"] .bubble`).textContent=round.qiyuReply;
-   const history=messages.querySelector(`[data-round-id="${round.id}"] .history-deck`);if(history?.open)renderHistoricalCards(round,history.querySelector('.history-cards'));
-  }else{rounds.push(round);appendMessage(round.qiyuReply,false,round);}
+   const history=replyMessage.querySelector('.history-deck');if(history?.open)renderHistoricalCards(round,history.querySelector('.history-cards'));
+  }else{rounds.push(round);}
   setState('reply','');scrollToLatest();
  }catch(error){console.error(error);setState('idle','暂时未能完成，请重新发送消息。');}
  finally{setBusy(false);spreadMode.disabled=false;renderCards();}
