@@ -10,8 +10,8 @@ const TarotData = (() => {
  const cards=[...majors];for(const suit of suits)for(const rank of ranks){cards.push({id:cards.length,name:suit.name+rank[0],uprightMeaning: `${suit.domain}中，${rank[1]}`,reversedMeaning:`${suit.domain}中，${rank[2]}`,emotionalTone:{upright:suit.tone,reversed:'克制'},actionTendency:{upright:suit.action,reversed:'放慢节奏，'+suit.action},relationshipMeaning:{upright:suit.relation,reversed:'留意不对等的感受，'+suit.relation}});}
  const spreads=[
  ['single','单牌阵',['当下指引']],['three','三牌阵',['现状','阻碍','建议']],['time','时间之流',['过去','现在','未来趋势']],['triangle','圣三角',['原因','现状','发展']],['pyramid','恋人金字塔',['自己','对方','关系','发展']],['core','直指核心',['表象','核心原因','隐藏需求','行动建议']],['cross','爱情十字',['自己','对方','连接','阻碍','建议']],['tree','爱情树',['根基','自己','对方','沟通','挑战','支持','成长']],['star','六芒星',['过去','现在','未来趋势','内在','外在','建议','整体']],['celtic','凯尔特牌阵',['现状','挑战','根基','过去','期待','近期趋势','自己','环境','担忧','长期趋势']]
- ].map(([id,name,positions])=>({id,name,positions}));
- function recommend(text){let id;if(/长期|多年|婚姻|结婚|复杂|纠缠/.test(text))id=/复杂|纠缠|婚姻/.test(text)?'celtic':'tree';else if(/以后|未来|趋势|接下来|会怎样/.test(text))id=/整体|长期趋势|全面/.test(text)?'star':'time';else if(/为什么|原因|根源/.test(text))id=/根源|到底|核心/.test(text)?'core':'triangle';else if(/恋爱|喜欢|爱我|想我|对方|他.*想|她.*想|感情|关系|复合/.test(text))id=/阻碍|冲突|复合/.test(text)?'cross':'pyramid';else if(/要不要|能不能|是否|该不该|行不行/.test(text))id='single';else id='three';return spreads.find(s=>s.id===id);}
+ ].map(([id,name,positions])=>Object.freeze({id,name,positions:Object.freeze(positions),count:positions.length}));
+ function recommend(text){let id;if(/长期|多年|婚姻|结婚|复杂|纠缠/.test(text))id=/复杂|纠缠|婚姻/.test(text)?'celtic':'tree';else if(/以后|未来|趋势|接下来|会怎样/.test(text))id=/整体|长期趋势|全面/.test(text)?'star':'time';else if(/为什么|原因|根源/.test(text))id=/根源|到底|核心/.test(text)?'core':'triangle';else if(/恋爱|喜欢|爱我|想我|对方|[他她].*(想|看|感觉|态度)|我们.*(相处|发展)|感情|关系|复合/.test(text))id=/阻碍|冲突|复合/.test(text)?'cross':'pyramid';else if(/要不要|能不能|是否|该不该|行不行|可不可以|好不好/.test(text))id='single';else id='three';return spreads.find(s=>s.id===id);}
  return {cards,spreads,recommend};
 })();
 
@@ -19,24 +19,62 @@ const TarotData = (() => {
 const cardsEl=document.querySelector('#cards'),messages=document.querySelector('#messages'),input=document.querySelector('#message'),send=document.querySelector('#send'),redraw=document.querySelector('#redraw');
 const rounds=[];let currentRound=null,busy=false,nextId=0;
 function randomInt(max){const a=new Uint32Array(1),limit=Math.floor(4294967296/max)*max;do{crypto.getRandomValues(a);}while(a[0]>=limit);return a[0]%max;}
-function draw(spread,previous=[]){let cards;do{const pool=TarotData.cards.map(c=>c.id);cards=spread.positions.map(position=>Object.freeze({id:pool.splice(randomInt(pool.length),1)[0],reversed:randomInt(2)===1,position}));}while(JSON.stringify(cards)===JSON.stringify(previous));return Object.freeze(cards);}
+function draw(spread,previous=[]){let cards;do{const pool=TarotData.cards.map(c=>c.id);cards=Array.from({length:spread.count},(_,index)=>{const position=spread.positions[index];return Object.freeze({id:pool.splice(randomInt(pool.length),1)[0],reversed:randomInt(2)===1,position});});}while(JSON.stringify(cards)===JSON.stringify(previous));return Object.freeze(cards);}
 function interpret(cards,spread,userMessage){const insights=cards.map(c=>{const meta=TarotData.cards[c.id],side=c.reversed?'reversed':'upright';return Object.freeze({cardName:meta.name,position:c.position,orientation:side,meaning:c.reversed?meta.reversedMeaning:meta.uprightMeaning,tone:meta.emotionalTone[side],action:meta.actionTendency[side],relationship:meta.relationshipMeaning[side]});});return Object.freeze({spread:spread.name,userMessage,relationshipQuestion:/爱|喜欢|关系|对方|他|她|复合|婚姻/.test(userMessage),insights:Object.freeze(insights)});}
 function replyText(round){const i=round.interpretation,items=i.insights;const focus=items.find(x=>/核心原因|阻碍|挑战/.test(x.position))||items[0];const guidance=items.find(x=>/建议|指引|成长|长期趋势|发展/.test(x.position))||items[items.length-1];const idea=i.relationshipQuestion?guidance.relationship:guidance.action;const positionContext=/未来|趋势|发展/.test(guidance.position)?'往后怎么走不用急着定下来。':/原因/.test(focus.position)?'我们可以先从这里慢慢理清。':'先照顾好你现在的感受。';const versions=[`雾雾，听你说完，我想到的是：${focus.meaning}。${positionContext}不如试着${idea}，我陪你。`,`我在听呢。${focus.meaning}，这点让我有些在意。先别催自己，试着${idea}，好不好？`,`过来一点，雾雾。${positionContext}也许${focus.meaning}。我们先${idea}，剩下的慢慢聊。`];return versions[round.version%versions.length];}
 function renderCardGroup(cards,container,compact){container.replaceChildren();for(const card of cards){const meta=TarotData.cards[card.id],orientation=card.reversed?'逆位':'正位';const el=document.createElement(compact?'span':'article');el.className=compact?'mini-card':'detail-card';el.append(makeTarotImage(card,compact?'mini-art':'detail-image'));const label=document.createElement('span');label.className=compact?'mini-name':'detail-name';label.textContent=meta.name;const side=document.createElement('span');side.className='orientation';side.textContent=orientation;const text=document.createElement('span');text.append(label,side);el.append(text);if(!compact){const position=document.createElement('p');position.textContent=card.position;el.append(position);}container.append(el);}}
-function renderCards(){const details=document.querySelector('#detail-cards');document.querySelector('#spread-name').textContent=currentRound?currentRound.spread.name:'';if(!currentRound){cardsEl.textContent='等待你的下一句话';details.replaceChildren();redraw.disabled=true;return;}redraw.disabled=busy;renderCardGroup(currentRound.cards,cardsEl,true);renderCardGroup(currentRound.cards,details,false);}
+function renderCards(){const details=document.querySelector('#detail-cards');document.querySelector('#spread-name').textContent=currentRound?currentRound.spread.name+' · '+currentRound.spread.count+'张':'';if(!currentRound){cardsEl.textContent='等待你的下一句话';details.replaceChildren();redraw.disabled=true;return;}redraw.disabled=busy;renderCardGroup(currentRound.cards,cardsEl,true);renderCardGroup(currentRound.cards,details,false);}
 function renderHistoricalCards(round,container){renderCardGroup(round.cards,container,false);}
 
 function appendMessage(text,isUser,round){const el=document.createElement('article');el.className=`message ${isUser?'user':'assistant'}`;const avatar=document.createElement('div');avatar.className='avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent=isUser?'雾':'祁';const content=document.createElement('div');content.className='message-content';const name=document.createElement('p');name.className='message-name';name.textContent=isUser?'雾雾':'祁煜';const bubble=document.createElement('div');bubble.className='bubble';bubble.textContent=text;const footer=document.createElement('div');footer.className='message-footer';const stamp=document.createElement('span');stamp.className='time';stamp.textContent=new Intl.DateTimeFormat('zh-CN',{hour:'2-digit',minute:'2-digit'}).format(new Date());footer.append(stamp);if(round){el.dataset.roundId=round.id;const button=document.createElement('button');button.type='button';button.className='reinterpret';button.textContent='↻ 重新解读';button.addEventListener('click',()=>{if(busy)return;round.version++;round.qiyuReply=replyText(round);bubble.textContent=round.qiyuReply;notify('换一种表达，保留这条回复的原牌组');});footer.append(button);const history=document.createElement('details');history.className='history-deck';const summary=document.createElement('summary');summary.textContent='查看本轮牌组 · '+round.spread.name;const group=document.createElement('div');group.className='history-cards';history.append(summary,group);history.addEventListener('toggle',()=>{if(history.open)renderHistoricalCards(round,group);});el._history=history;}content.append(name,bubble,footer);if(el._history)content.append(el._history);el.append(avatar,content);messages.append(el);return el;}
 function scrollToLatest(){const el=document.querySelector('#conversation');el.scrollTop=el.scrollHeight;}
-function setBusy(value){busy=value;send.disabled=value||!input.value.trim();redraw.disabled=value||!currentRound;document.querySelector('#cards').classList.toggle('shuffling',value);document.querySelectorAll('.reinterpret').forEach(b=>b.disabled=value);messages.setAttribute('aria-busy',String(value));}
-async function shuffle(){setBusy(true);cardsEl.textContent='洗牌中…';await new Promise(resolve=>setTimeout(resolve,600));}
-function populateRound(round){round.cards=draw(round.spread,round.cards);round.interpretation=interpret(round.cards,round.spread,round.userMessage);round.version=0;round.qiyuReply=replyText(round);}
-document.querySelector('#chat-form').addEventListener('submit',async e=>{e.preventDefault();const text=input.value.trim();if(!text||busy)return;const round={id:++nextId,userMessage:text,spread:TarotData.recommend(text),cards:[],interpretation:null,qiyuReply:'',version:0};appendMessage(text,true);input.value='';input.style.height='auto';document.querySelector('#spread-name').textContent=round.spread.name;scrollToLatest();await shuffle();populateRound(round);rounds.push(round);currentRound=round;appendMessage(round.qiyuReply,false,round);setBusy(false);renderCards();scrollToLatest();});
-redraw.addEventListener('click',async()=>{if(busy||!currentRound)return;const round=currentRound;await shuffle();populateRound(round);messages.querySelector(`[data-round-id="${round.id}"] .bubble`).textContent=round.qiyuReply;const history=messages.querySelector(`[data-round-id="${round.id}"] .history-deck`);if(history?.open)renderHistoricalCards(round,history.querySelector('.history-cards'));setBusy(false);renderCards();notify('当前这一轮已换牌并生成新回复');});
+function setBusy(value){busy=value;send.disabled=value||!input.value.trim();redraw.disabled=value||!currentRound;document.querySelectorAll('.reinterpret').forEach(b=>b.disabled=value);messages.setAttribute('aria-busy',String(value));}
+// Recommendation seam: a future Luna classifier may return only a spread ID, never cards.
+const spreadSelector={classify:async text=>TarotData.recommend(text).id};
+const spreadMode=document.querySelector('#spread-mode');
+for(const spread of TarotData.spreads){const option=document.createElement('option');option.value=spread.id;option.textContent=spread.name+' · '+spread.count+'张';spreadMode.append(option);}
+const flowStatus=document.querySelector('#flow-status'),shuffleStage=document.querySelector('#shuffle-stage');
+for(let i=0;i<20;i++){const back=document.createElement('span');back.className='shuffle-back';back.style.setProperty('--i',i);shuffleStage.append(back);}
+let flowState='idle';
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function setState(state,text){flowState=state;document.querySelector('.app').dataset.state=state;flowStatus.textContent=text;flowStatus.hidden=!text;shuffleStage.hidden=state!=='shuffling';}
+async function runRound(round,isRedraw=false){
+ setBusy(true);spreadMode.disabled=true;
+ document.querySelector('#deck-details').hidden=true;document.querySelector('#deck-toggle').setAttribute('aria-expanded','false');
+ try{
+  if(!isRedraw){
+   setState('selecting_spread','正在与祁煜建立联系…');cardsEl.textContent='正在推荐牌阵…';document.querySelector('#spread-name').textContent='';
+   const id=spreadMode.value==='auto'?await spreadSelector.classify(round.userMessage):spreadMode.value;
+   round.spread=TarotData.spreads.find(s=>s.id===id);if(!round.spread)throw new Error('未找到合适牌阵');
+   await wait(450);
+  }
+  document.querySelector('#spread-name').textContent=round.spread.name+' · '+round.spread.count+'张';
+  setState('shuffling','洗牌中…');cardsEl.textContent='洗牌中…';
+  await wait(3000+randomInt(2001));
+  // The random engine alone selects cards. Exactly one draw operation per user-requested round.
+  round.cards=draw(round.spread,round.cards);currentRound=round;round.version=0;
+  setState('cards_revealed','本轮牌组已锁定');renderCards();
+  await wait(650);
+  setState('interpreting','正在解读这一轮…');
+  round.interpretation=interpret(round.cards,round.spread,round.userMessage);
+  await wait(600+randomInt(401));
+  round.qiyuReply=replyText(round);
+  setState('interpreting','祁煜正在输入…');
+  await wait(650+randomInt(701));
+  if(isRedraw){
+   messages.querySelector(`[data-round-id="${round.id}"] .bubble`).textContent=round.qiyuReply;
+   const history=messages.querySelector(`[data-round-id="${round.id}"] .history-deck`);if(history?.open)renderHistoricalCards(round,history.querySelector('.history-cards'));
+  }else{rounds.push(round);appendMessage(round.qiyuReply,false,round);}
+  setState('reply','');scrollToLatest();
+ }catch(error){console.error(error);setState('idle','暂时未能完成，请重新发送消息。');}
+ finally{setBusy(false);spreadMode.disabled=false;renderCards();}
+}
+document.querySelector('#chat-form').addEventListener('submit',async e=>{e.preventDefault();const text=input.value.trim();if(!text||busy)return;const round={id:++nextId,userMessage:text,spread:null,cards:[],interpretation:null,qiyuReply:'',version:0};appendMessage(text,true);input.value='';input.style.height='auto';scrollToLatest();await runRound(round);});
+redraw.addEventListener('click',async()=>{if(busy||!currentRound)return;await runRound(currentRound,true);});
 const toggle=document.querySelector('#deck-toggle'),details=document.querySelector('#deck-details');toggle.addEventListener('click',()=>{if(!currentRound||busy)return;details.hidden=!details.hidden;toggle.setAttribute('aria-expanded',String(!details.hidden));document.querySelector('#chevron').textContent=details.hidden?'⌄':'⌃';});
 input.addEventListener('input',()=>{send.disabled=busy||!input.value.trim();input.style.height='auto';input.style.height=Math.min(input.scrollHeight,110)+'px';});input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&matchMedia('(min-width:700px)').matches){e.preventDefault();document.querySelector('#chat-form').requestSubmit();}});
 let toastTimer;function notify(text){const el=document.querySelector('#toast');el.textContent=text;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.hidden=true,2600);}
 document.querySelector('#image-tool').addEventListener('click',()=>notify('图片入口已预留，暂不上传图片'));document.querySelector('#link-tool').addEventListener('click',()=>notify('链接入口已预留，也可以直接粘贴链接'));
 const emojiToggle=document.querySelector('#emoji-tool'),picker=document.querySelector('#emoji-picker');emojiToggle.addEventListener('click',()=>{picker.hidden=!picker.hidden;emojiToggle.setAttribute('aria-expanded',String(!picker.hidden));});picker.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{input.setRangeText(button.textContent,input.selectionStart,input.selectionEnd,'end');input.dispatchEvent(new Event('input'));input.focus();picker.hidden=true;emojiToggle.setAttribute('aria-expanded','false');}));
-renderCards();
+setState('idle','');renderCards();
 if(window.visualViewport){const fit=()=>document.querySelector('.app').style.height=window.visualViewport.height+'px';window.visualViewport.addEventListener('resize',fit);fit();}
